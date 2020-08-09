@@ -1,0 +1,17 @@
+a, b = 0, 1
+count = 0
+
+n = int(input("Enter terms to be displayed:"))
+if n <= 0:
+    print("Invalid choice")
+elif n == 1:
+    print("Fibonacci sequence upto",n,":")
+    print(a)
+else:
+    print("Fibonacci sequence:")
+    while count < n:
+        print(a)
+        t = a + b
+        a = b
+        b = t
+        count += 1
