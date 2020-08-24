@@ -1,0 +1,18 @@
+import operator
+str = input("Please enter a string:")
+def most_frequent(str):
+    d = {}
+    for n in str:
+        keys = d.keys()
+        if n in keys:
+            d[n] += 1
+        else:
+            d[n] = 1
+
+    sort= sorted(d.items(), key=operator.itemgetter(1), reverse=True)
+    s = {}
+    s = sort.copy()
+    s_sorted_keys = sorted(s, key=operator.itemgetter(1), reverse=True)
+    for r in range(len(s_sorted_keys)):
+        print(s[r])
+most_frequent(str)   
